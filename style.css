@@ -1,4 +1,4 @@
-/*
+
 
 *{
     padding: 0;
@@ -43,7 +43,7 @@
     outline-color: blue;
 }
 /* section 1 */
-/* 
+
 .section1{
     
   
@@ -71,7 +71,7 @@ gap: 10px;
     color: white;
 }
 /* section 2 */
-/* 
+
 .home{
     display: flex;
     flex-wrap: wrap;
@@ -82,4 +82,3 @@ gap: 10px;
     display: none;
 }
 
-*/
