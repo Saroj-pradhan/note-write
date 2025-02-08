@@ -48,8 +48,7 @@ button{
 .section1{
     
   
-    
-    margin:2rem 3rem 1rem 6rem;
+   
 }
 .create-todo{
     width: 100%;
@@ -69,17 +68,34 @@ gap: 10px;
 .btn{
     width: 4rem;
     background-color: rgb(10, 10, 32);
-    color: rgb(221, 11, 196);
+  
+}
+.inp-btn {
+    padding: 10px 20px;
+    width: 120px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 /* section 2 */
 
 .home{
     display: flex;
     flex-wrap: wrap;
+    max-height: 500px;
+    
 }
 .home img{
     width: 1.7rem;
     height: 1.7rem;
     display: none;
+   
 }
+/* check */
+/* Parent container for notes */
+
 

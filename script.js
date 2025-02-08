@@ -23,15 +23,16 @@ function add(x){
     let p = document.createElement("p");
     p.id = "box";
     p.style.width = "200px";
-    p.style.height = "fit-content";
+//   p.style.height = "fit-content";
+   p.style.maxHeight = "500px";
    p.textContent = x;
 //    p.style.backgroundColor = "blue";
    p.style.border = "2px solid black ";
    p.style.borderRadius = "15px";
    p.style.margin = "40px";
    p.style.padding = "10px";
-
-   p.style.overflow = "hidden";
+   p.style.overflowY = "auto"
+   // p.style.overflow = "hidden";
    rndcol(p);
    
    
