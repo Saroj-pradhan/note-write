@@ -41,10 +41,11 @@ function add(x){
 
 
 let deleteimg = document.createElement("img");
-deleteimg.src = "images/delete.png";
+deleteimg.src = "public/images/delete.png";
 deleteimg.style.width = "1.7rem";
 deleteimg.style.height = "1.7rem";
 deleteimg.style.display="none";
+deleteimg.style.backgroundColor = "white";
 // par.appendChild(deleteimg);
 p.addEventListener("mouseenter", () => {
 deleteimg.style.display = "block";
