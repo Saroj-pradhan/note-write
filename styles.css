@@ -97,5 +97,26 @@ gap: 10px;
 }
 /* check */
 /* Parent container for notes */
+@media(max-width: 768px){
+    .section1{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    #crto{
+        width: 50%;
+    }
+   .lbtn{
+    display: none;
+   
+   } 
+   .left-nav p{
+    font-size: 1.6rem;
+    margin: 0px;
+}
 
+.home {
+margin-left: 2rem;
+
+}
+}
 

@@ -47,6 +47,7 @@ deleteimg.style.width = "1.7rem";
 deleteimg.style.height = "1.7rem";
 deleteimg.style.display="none";
 deleteimg.style.backgroundColor = "white";
+deleteimg.style.cssFloat = "right";
 // par.appendChild(deleteimg);
 p.addEventListener("mouseenter", () => {
 deleteimg.style.display = "block";

@@ -61,4 +61,14 @@ p {
   
 }
 /* hii */
-
+@media(max-width:768px){
+    .container{
+        margin-left: 7px;
+        margin-right: 7px;
+        
+    }
+    h1{
+        font-size: 2.2em;
+        margin-bottom: 19px;
+    }
+}
