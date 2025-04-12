@@ -7,16 +7,17 @@ function updateStorage() {
    // Collect all notes and their colors
    home.querySelectorAll("p").forEach((note) => {
        notes.push({
-           text: note.textContent.replace("\u2715", ""), // Remove delete icon text
-           color: note.style.backgroundColor,
+           text: note.textContent // Remove delete icon text
+         
        });
    });
    localStorage.setItem("notes", JSON.stringify(notes));
-}
+}  
 function rndcol(p){
    let rnd1 = Math.floor(Math.random() *254);
    let rnd2 = Math.floor(Math.random() *254);
    let rnd3 = Math.floor(Math.random() *254);
+   p.style.color="black";
    p.style.backgroundColor = `rgb(${rnd1}, ${rnd2}, ${rnd3})`;
 }
 function add(x){
@@ -32,11 +33,16 @@ function add(x){
    p.style.margin = "40px";
    p.style.padding = "10px";
    p.style.overflowY = "auto"
-   // p.style.overflow = "hidden";
-   rndcol(p);
-   
-   
-//   home.appendChild(p);
+
+ rndcol(p);
+//update 
+   p.addEventListener("click",()=>{
+      p.contentEditable="true";
+   })
+   p.addEventListener("mouseleave",()=>{
+      updateStorage();
+   })
+
     
 
 
@@ -47,8 +53,9 @@ deleteimg.style.width = "1.7rem";
 deleteimg.style.height = "1.7rem";
 deleteimg.style.display="none";
 deleteimg.style.backgroundColor = "white";
-deleteimg.style.cssFloat = "right";
-// par.appendChild(deleteimg);
+deleteimg.style.float = "right";
+
+// when to show delete img when to not
 p.addEventListener("mouseenter", () => {
 deleteimg.style.display = "block";
 });
@@ -62,6 +69,7 @@ deleteimg.addEventListener("click", (e) => {
    
 updateStorage();
 });
+
 
 p.appendChild(deleteimg);
 home.appendChild(p);
@@ -84,28 +92,9 @@ crto.value ="";
 function loadNotes() {
    const notes = JSON.parse(localStorage.getItem("notes")) || [];
    notes.forEach((note) => {
-       add(note.text, note.color); // Restore each note
+       add(note.text); // Restore each note
    });
 }
 
 // Load notes when the page is loaded
 window.addEventListener("DOMContentLoaded", loadNotes);
-
-// ///////////////////////  server  run  ///////
-
-// const express = require("express");
-// const app = express();
-// const port = 3000;
-// const path = require("path"); 
-// app.use(express.json());
-// app.use(express.static(path.join(__dirname,'public')));
-// // app.use(express.static('public'));
-
-// app.set('view engine','ejs'); 
-// app.get('/home',(req,res)=>{
-//    res.render('index');
-// });
-// app.use((error,req,res)=>{
-// res.send("404 Not Found");
-// });
-// app.listen(port);  
