@@ -31,10 +31,12 @@ button{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+button:hover{
+    background-color: #db2777;
+    color: white;
+}
 
-.right-nav{
-   
-  }
+
 
 .left-nav p{
     font-size: 2.5rem;
